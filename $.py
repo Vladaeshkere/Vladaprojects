@@ -11,6 +11,7 @@ for parse_elem in response_parse:
         for parse_elem2 in parse_elem.split('<'):
             # print(parse_elem2)
             if parse_elem2.startswith(">"):
-                valyta_list.append(float(parse_elem2.split(">")[1].replace(",", "")))
+                valyta_list.append(float(parse_elem2.split(">")[1].replace(",", ".")))
 
 print('Долар США -', int(valyta_list[7]))
+print('Долар США точний -', valyta_list[7])
