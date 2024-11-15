@@ -1,7 +1,23 @@
 class CalculationRectangle:
-    def __init__(self, a, b):
-        self.__a = a
-        self.__b = b
+    def __init__(self):
+        self.__a = None
+        __ErrorTypeA = True
+        if __ErrorTypeA:
+            while __ErrorTypeA:
+                try:
+                    self.__a = int(input('Write the first side of the rectangle'))
+                    __ErrorTypeA = False
+                except ValueError:
+                    print('Please write a number')
+        self.__b = None
+        __ErrorTypeB = True
+        if __ErrorTypeB:
+            while __ErrorTypeB:
+                try:
+                    self.__b = int(input('Write the second side of the rectangle'))
+                    __ErrorTypeB = False
+                except ValueError:
+                    print('Please write a number')
 
     def __perimeter(self):
         self.__sum = self.__b + self.__a
@@ -17,27 +33,10 @@ class CalculationRectangle:
         print(f'S = {self.__area()}')
 
 
-a = None
-ErrorTypeA = True
-if ErrorTypeA:
-    while ErrorTypeA:
-        try:
-            a = int(input('Write the first side of the rectangle'))
-            ErrorTypeA = False
-        except ValueError:
-            print('Please write a number')
-
-b = None
-ErrorTypeB = True
-if ErrorTypeB:
-    while ErrorTypeB:
-        try:
-            b = int(input('Write the second side of the rectangle'))
-            ErrorTypeB = False
-        except ValueError:
-            print('Please write a number')
-
-
-rectangle = CalculationRectangle(a, b)
+rectangle = CalculationRectangle()
 rectangle.get_perimeter()
 rectangle.get_area()
+
+rectangle2 = CalculationRectangle()
+rectangle2.get_perimeter()
+rectangle2.get_area()
