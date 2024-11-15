@@ -1,4 +1,5 @@
 class CalculationRectangle:
+
     def __init__(self):
         self.__a = None
         __ErrorTypeA = True
